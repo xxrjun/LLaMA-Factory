@@ -34,7 +34,13 @@ PEFT_METHODS = ["lora"]
 
 RUNNING_LOG = "running_log.txt"
 
-SUBJECTS = ["Average", "STEM", "Social Sciences", "Humanities", "Other"]
+# Original LLaMA-Factory 
+# SUBJECTS = ["Average", "STEM", "Social Sciences", "Humanities", "Other"]
+
+# Custom
+SUBJECTS = ["Average", "physics", "chemistry", "biology", "computer science", "math", "engineering", "history", "philosophy", "law", "politics", "culture", "economics", "geography", "psychology", "other", "business", "health"]
+
+LAW_SUBJECTS = ['Average', 'general_principles_of_law', 'administrative_law', 'introduction_to_law']
 
 SUPPORTED_MODELS = OrderedDict()
 
