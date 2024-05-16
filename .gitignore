@@ -163,3 +163,10 @@ cython_debug/
 user.config
 saves/
 cache/
+
+# Wandb
+
+**/wandb/
+
+# custom data (might be too large)
+data/biomedicine
