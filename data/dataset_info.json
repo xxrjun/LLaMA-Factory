@@ -1,4 +1,10 @@
 {
+  "biomedicine_cp_v0.2": {
+    "file_name": "biomedicine/cp/cp_data_v0.2.txt",
+    "columns": {
+      "prompt": "text"
+    }
+  },
   "biomedicine_cp_v1.1": {
     "file_name": "biomedicine/cp/cp_data_v1.1.txt",
     "columns": {
