@@ -1,4 +1,10 @@
 {
+  "biomedicine_cp_vexample": {
+    "file_name": "biomedicine/cp/cp_data_vexample.txt",
+    "columns": {
+      "prompt": "text"
+    }
+  },
   "biomedicine_cp_v0.2": {
     "file_name": "biomedicine/cp/cp_data_v0.2.txt",
     "columns": {
@@ -15,6 +21,14 @@
     "file_name": "biomedicine/cp/cp_data_v1.2.txt",
     "columns": {
       "prompt": "text"
+    }
+  },
+  "biomedicine_sft_vexample": {
+    "file_name": "biomedicine/sft/sft_data_vexample.json",
+    "columns": {
+      "prompt": "instruction",
+      "query": "input",
+      "response": "output"
     }
   },
   "biomedicine_sft_v2.0": {
