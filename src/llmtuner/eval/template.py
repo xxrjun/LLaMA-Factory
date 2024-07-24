@@ -68,3 +68,12 @@ _register_eval_template(
     answer="\n答案：",
     prefix=" ",
 )
+
+
+_register_eval_template(
+    name="zh-tw",
+    system="以下是關於{subject}的單項選擇題，請選出題目給予的正確答案。\n\n",
+    choice="\n{choice}. {content}",
+    answer="\n答案：",
+    prefix=" ",
+)

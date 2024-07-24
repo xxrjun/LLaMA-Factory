@@ -624,6 +624,22 @@ _register_template(
 
 
 _register_template(
+    name="llama2_zh_tw",
+    format_user=StringFormatter(slots=[{"bos_token"}, "[INST] {{content}} [/INST]"]),
+    format_system=StringFormatter(slots=["<<SYS>>\n{{content}}\n<</SYS>>\n\n"]),
+    default_system=(
+        "你是一個有幫助、尊重且誠實的助手。"
+        "在確保安全的前提下，盡可能幫助用戶。"
+        "你的回答不應包含任何有害、不道德、種族歧視、性別歧視、具有攻擊性、危險或非法的內容。"
+        "請確保你的回應是社會上沒有偏見且正面的。\n\n"
+        "如果一個問題沒有任何意義，或在事實上不連貫，"
+        "請解釋原因而不是回答不正確的內容。"
+        "如果你不知道某個問題的答案，請不要分享錯誤的信息。"
+    ),
+)
+
+
+_register_template(
     name="mistral",
     format_user=StringFormatter(slots=["[INST] {{content}} [/INST]"]),
     format_system=StringFormatter(slots=[{"bos_token"}, "{{content}}"]),

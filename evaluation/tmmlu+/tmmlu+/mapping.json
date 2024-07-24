@@ -1,0 +1,15 @@
+{
+    "general_principles_of_law": {
+      "name": "general principles of law",
+      "category": "general_principles_of_law"
+    },
+    "administrative_law": {
+      "name": "administrative law",
+      "category": "administrative_law"
+    }
+    ,
+    "introduction_to_law": {
+      "name": "introduction to law",
+      "category": "introduction_to_law"
+    }
+}

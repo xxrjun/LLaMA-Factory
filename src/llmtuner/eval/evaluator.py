@@ -12,7 +12,7 @@ from tqdm import tqdm, trange
 from transformers.utils import cached_file
 
 from ..data import get_template_and_fix_tokenizer
-from ..extras.constants import CHOICES, SUBJECTS
+from ..extras.constants import CHOICES, SUBJECTS, LAW_SUBJECTS
 from ..hparams import get_eval_args
 from ..model import load_model_and_tokenizer
 from .template import get_eval_template
@@ -48,7 +48,10 @@ class Evaluator:
         with open(mapping, "r", encoding="utf-8") as f:
             categorys: Dict[str, Dict[str, str]] = json.load(f)
 
-        category_corrects = {subj: np.array([], dtype="bool") for subj in SUBJECTS}
+        if self.eval_args.task == "tmmlu+": # for tmmlu+ dataset
+            category_corrects = {subj: np.array([], dtype="bool") for subj in LAW_SUBJECTS}
+        else:
+            category_corrects = {subj: np.array([], dtype="bool") for subj in SUBJECTS}
         pbar = tqdm(categorys.keys(), desc="Processing subjects", position=0)
         results = {}
         for subject in pbar:
